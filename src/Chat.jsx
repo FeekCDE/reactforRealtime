@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
+import { baseUrl } from "../constant";
 
-const socket = io("http://localhost:4000/");
+const socket = io(baseUrl);
 
 const Chat = () => {
   const messageRef = useRef("");
